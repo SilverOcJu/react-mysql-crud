@@ -1,10 +1,15 @@
 import React from 'react'
+
+// Material UI
 import Box from '@mui/material/Box';
 import { Typography, TextField, Stack, Button } from '@mui/material';
-
+// Íconos
 import { Engineering, Login } from '@mui/icons-material';
+// Para trabajar con Rutas
+import { useNavigate } from 'react-router-dom';
 
 const LoginScreen = () => {
+  const navigate = useNavigate();
   const url='https://cdn-icons-png.flaticon.com/512/686/686900.png';
 
   return(
@@ -44,7 +49,14 @@ const LoginScreen = () => {
       >
         <TextField size="small" id="usuario" label="Usuario" variant="outlined" fullWidth />
         <TextField size="small" id="contrasena" label="Contraseña" type="password" variant="outlined" fullWidth />
-        <Button variant="outlined" fullWidth startIcon={<Login />}>Iniciar sesión</Button>
+        <Button
+          variant="outlined" 
+          fullWidth 
+          startIcon={<Login />}
+          onClick={() => { navigate("/tablas") }}
+        >
+          Iniciar sesión
+        </Button>
       </Stack>
     </Box>
     </Box>

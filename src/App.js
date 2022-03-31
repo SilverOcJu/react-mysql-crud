@@ -1,13 +1,10 @@
 import React from "react";
-import { Box } from "@mui/system";
-// Componentes
-import LoginScreen from "../src/components/LoginScreen";
+// Rutas 
+import Router from "./api/routes";
 
 function App() {
   return (
-    <Box>
-      <LoginScreen />
-    </Box>
+    <Router />
   );
 }
 
