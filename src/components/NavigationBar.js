@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,14 +9,15 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const NavigationBar = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <AppBar position="static">
         <Toolbar>
-          <Link to="/alumnos">Alumnos</Link>
-          <Link to="/carrera">Carrera</Link>
-          <Link to="/escuela">Escuela</Link>
-          <Link to="/grupo">Grupo</Link>
+          <Button color="inherit" onClick={() => navigate("/alumnos")}>Alumnos</Button>
+          <Button color="inherit" onClick={() => navigate("/carrera")}>Carrera</Button>
+          <Button color="inherit" onClick={() => navigate("/Escuela")}>Escuela</Button>
+          <Button color="inherit" onClick={() => navigate("/Grupo")}>Grupo</Button>
         </Toolbar>
       </AppBar>
     </Box>

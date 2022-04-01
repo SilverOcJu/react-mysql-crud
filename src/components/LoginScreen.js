@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 const LoginScreen = () => {
   const navigate = useNavigate();
-  const url='https://cdn-icons-png.flaticon.com/512/686/686900.png';
+  const url='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fseeklogo.com%2Fimages%2FI%2Fipn-national-polytechnic-institute-logo-C93A7AFE65-seeklogo.com.png&f=1&nofb=1';
 
   return(
     <Box sx={{ 
@@ -53,7 +53,7 @@ const LoginScreen = () => {
           variant="outlined" 
           fullWidth 
           startIcon={<Login />}
-          onClick={() => { navigate("/tablas") }}
+          onClick={() => { navigate("/carrera") }}
         >
           Iniciar sesión
         </Button>
